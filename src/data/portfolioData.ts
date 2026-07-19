@@ -21,14 +21,13 @@ export const portfolioData: PortfolioData = {
       github: "https://github.com/nandakishor-Dev", // Placeholder to be edited by user
       linkedin: "https://linkedin.com/in/nandakishor-pg", // Placeholder to be edited by user
       email: "nandakishorpg@gmail.com", // Stylized placeholder
+      phone: "+91 9496400700",
       resume: "/Nandakishor P G - React js Developer.pdf"
     }
   },
   stats: [
     { value: "3+", label: "Years Experience" },
-    { value: "15+", label: "Projects Completed" },
-    { value: "10+", label: "Technologies" },
-    { value: "1+", label: "Client Projects" }
+    { value: "10+", label: "Technologies" }
   ],
   skills: [
     {

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import emailjs from '@emailjs/browser';
-import { FaEnvelope, FaGithub, FaLinkedin, FaCopy, FaCheck } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaCopy, FaCheck, FaPhoneAlt } from 'react-icons/fa';
 import { portfolioData } from '../data/portfolioData';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -41,6 +41,17 @@ export const Contact: React.FC = () => {
     setIsCopied(true);
     showToast('Email copied to clipboard!', 'success');
     setTimeout(() => setIsCopied(false), 2500);
+  };
+
+  const [isPhoneCopied, setIsPhoneCopied] = useState(false);
+
+  const handleCopyPhone = () => {
+    if (profile.socials.phone) {
+      navigator.clipboard.writeText(profile.socials.phone);
+      setIsPhoneCopied(true);
+      showToast('Phone number copied to clipboard!', 'success');
+      setTimeout(() => setIsPhoneCopied(false), 2500);
+    }
   };
 
   const onSubmit = async (data: ContactFormData) => {
@@ -147,6 +158,34 @@ export const Contact: React.FC = () => {
                     {isCopied ? <FaCheck className="w-3.5 h-3.5 text-emerald-500" /> : <FaCopy className="w-3.5 h-3.5" />}
                   </button>
                 </div>
+
+                {/* Phone item */}
+                {profile.socials.phone && (
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-bg-tertiary border border-border-primary/50 group">
+                    <div className="flex items-center gap-3">
+                      <span className="p-2.5 rounded-lg bg-accent-muted text-accent">
+                        <FaPhoneAlt className="w-3.5 h-3.5" />
+                      </span>
+                      <div className="text-left">
+                        <span className="block text-[11px] font-semibold uppercase text-text-secondary tracking-wider">
+                          Mobile Number
+                        </span>
+                        <a href={`tel:${profile.socials.phone}`} className="text-sm font-semibold text-text-primary hover:text-accent transition-colors">
+                          {profile.socials.phone}
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Clipboard trigger */}
+                    <button
+                      onClick={handleCopyPhone}
+                      className="p-2 rounded-lg hover:bg-bg-secondary text-text-secondary hover:text-text-primary transition-colors cursor-pointer border border-transparent hover:border-border-primary/50"
+                      title="Copy to clipboard"
+                    >
+                      {isPhoneCopied ? <FaCheck className="w-3.5 h-3.5 text-emerald-500" /> : <FaCopy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+                )}
 
                 {/* GitHub link card */}
                 <a

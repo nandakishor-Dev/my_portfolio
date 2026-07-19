@@ -139,7 +139,7 @@ export const Hero: React.FC = () => {
             </Button>
 
             <a
-              href={profile.socials.resume}
+              href={`${import.meta.env.BASE_URL}${profile.socials.resume.replace(/^\//, '')}`}
               download
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border-primary hover:bg-bg-tertiary rounded-xl font-medium text-text-secondary hover:text-text-primary transition-all text-sm md:text-base cursor-pointer"
             >
