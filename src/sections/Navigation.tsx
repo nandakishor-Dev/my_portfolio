@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Playground', href: '#playground' },
   { label: 'Contact', href: '#contact' },
 ];
 

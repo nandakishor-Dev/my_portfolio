@@ -4,7 +4,7 @@ import { FaReact, FaDownload, FaArrowRight, FaCode } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { portfolioData } from '../data/portfolioData';
 import { Button } from '../components/ui/Button';
-import heroImg from '../assets/hero.png';
+const heroImg = `${import.meta.env.BASE_URL}npg.png`;
 
 export const Hero: React.FC = () => {
   const { profile } = portfolioData;
@@ -166,7 +166,7 @@ export const Hero: React.FC = () => {
                 <img
                   src={heroImg}
                   alt={profile.name}
-                  className="w-full h-full object-cover rounded-3xl scale-95 hover:scale-100 transition-transform duration-500 pointer-events-none"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 pointer-events-none"
                   width="360"
                   height="360"
                 />

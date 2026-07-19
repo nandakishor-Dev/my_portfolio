@@ -8,13 +8,14 @@ import { Skills } from '../sections/Skills';
 import { Experience } from '../sections/Experience';
 import { Education } from '../sections/Education';
 import { Projects } from '../sections/Projects';
+import { Playground } from '../sections/Playground';
 import { WhyHireMe } from '../sections/WhyHireMe';
 import { Contact } from '../sections/Contact';
 import { Footer } from '../sections/Footer';
 
 export const Home: React.FC = () => {
   const { profile } = portfolioData;
-  const siteUrl = "https://nandakishor-portfolio.vercel.app"; // Fallback production URL
+  const siteUrl = "https://nandakishor-Dev.github.io/my_portfolio"; // GitHub Pages URL
 
   // JSON-LD Structured Data
   const jsonLdData = {
@@ -100,6 +101,10 @@ export const Home: React.FC = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
           
           <Projects />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
+          
+          <Playground />
           
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
           
