@@ -209,7 +209,7 @@ export const Projects: React.FC = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary hover:bg-bg-tertiary text-text-secondary hover:text-text-primary rounded-xl font-semibold text-xs transition-all ${
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary hover:bg-bg-tertiary text-text-secondary hover:text-text-primary rounded-xl font-semibold text-xs transition-all whitespace-nowrap ${
                             project.liveUrl ? 'w-1/2' : 'w-full'
                           } cursor-pointer`}
                         >
@@ -218,7 +218,7 @@ export const Projects: React.FC = () => {
                         </a>
                       ) : project.isPrivate ? (
                         <div
-                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none ${
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none whitespace-nowrap ${
                             project.liveUrl ? 'w-1/2' : 'w-full'
                           }`}
                           title="Proprietary client codebase. Source code is confidential."
@@ -233,16 +233,16 @@ export const Projects: React.FC = () => {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent hover:opacity-95 text-white rounded-xl font-semibold text-xs transition-all ${
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent hover:opacity-95 text-white rounded-xl font-semibold text-xs transition-all whitespace-nowrap ${
                             (project.githubUrl || project.isPrivate) ? 'w-1/2' : 'w-full'
                           } cursor-pointer shadow-sm shadow-accent/15`}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
-                          Live Demo
+                          {project.liveButtonLabel || 'Live Demo'}
                         </a>
                       ) : project.isPrivate ? (
                         <div
-                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none ${
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none whitespace-nowrap ${
                             (project.githubUrl || project.isPrivate) ? 'w-1/2' : 'w-full'
                           }`}
                           title="Internal business application. No public demo available."

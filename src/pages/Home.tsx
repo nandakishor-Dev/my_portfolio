@@ -12,6 +12,7 @@ import { Playground } from '../sections/Playground';
 import { WhyHireMe } from '../sections/WhyHireMe';
 import { Contact } from '../sections/Contact';
 import { Footer } from '../sections/Footer';
+import { TerminalWidget } from '../components/ui/TerminalWidget';
 
 export const Home: React.FC = () => {
   const { profile } = portfolioData;
@@ -117,6 +118,9 @@ export const Home: React.FC = () => {
 
         {/* Footer */}
         <Footer />
+
+        {/* Floating Developer Terminal Widget */}
+        <TerminalWidget />
       </div>
     </>
   );

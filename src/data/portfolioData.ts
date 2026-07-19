@@ -57,9 +57,12 @@ export const portfolioData: PortfolioData = {
     {
       title: "Backend Familiarity",
       skills: [
-        "Supabase",
-        "PostgreSQL",
-        "Node.js (Basic)"
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SQL / PostgreSQL",
+        "REST API Development",
+        "Supabase"
       ]
     },
     {
@@ -166,6 +169,7 @@ export const portfolioData: PortfolioData = {
       ],
       category: "react",
       liveUrl: "https://equal.ae/products/equal-property-management-system",
+      liveButtonLabel: "Product Page",
       imagePlaceholder: "EQUAL",
       imageUrl: "/projectlogo.svg",
       isPrivate: true

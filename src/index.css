@@ -35,6 +35,7 @@
   --accent-hover: #4338ca;
   --accent-muted: rgba(79, 70, 229, 0.05);
   --accent-border: rgba(79, 70, 229, 0.15);
+  --card-spotlight: rgba(79, 70, 229, 0.035);
   
   color-scheme: light;
 }
@@ -50,6 +51,7 @@
   --accent-hover: #6366f1;
   --accent-muted: rgba(129, 140, 248, 0.08);
   --accent-border: rgba(129, 140, 248, 0.2);
+  --card-spotlight: rgba(129, 140, 248, 0.075);
   
   color-scheme: dark;
 }

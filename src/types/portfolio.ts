@@ -48,6 +48,7 @@ export interface ProjectItem {
   category: 'react' | 'typescript' | 'mobile' | 'all';
   githubUrl?: string;
   liveUrl?: string;
+  liveButtonLabel?: string;
   imagePlaceholder: string;
   badge?: string;
   imageUrl?: string;
