@@ -137,7 +137,7 @@ export const Projects: React.FC = () => {
                   >
                     {project.imageUrl ? (
                       <img 
-                        src={project.imageUrl} 
+                        src={`${import.meta.env.BASE_URL}${project.imageUrl.replace(/^\//, '')}`} 
                         alt={`${project.title} logo`} 
                         className="h-10 w-auto object-contain select-none pointer-events-none" 
                       />

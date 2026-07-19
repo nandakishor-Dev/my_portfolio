@@ -167,7 +167,7 @@ export const portfolioData: PortfolioData = {
       category: "react",
       liveUrl: "https://equal.ae/products/equal-property-management-system",
       imagePlaceholder: "EQUAL",
-      imageUrl: "/assets/images/logo.svg",
+      imageUrl: "/projectlogo.svg",
       isPrivate: true
     },
     {
