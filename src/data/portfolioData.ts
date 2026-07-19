@@ -18,10 +18,10 @@ export const portfolioData: PortfolioData = {
     aboutHonestMobile: "I also have practical React Native experience through personal projects and one client project, and I continue expanding my mobile development skills.",
     profileImagePlaceholderText: "NK",
     socials: {
-      github: "https://https://github.com/nandakishor-Dev", // Placeholder to be edited by user
+      github: "https://github.com/nandakishor-Dev", // Placeholder to be edited by user
       linkedin: "https://linkedin.com/in/nandakishor-pg", // Placeholder to be edited by user
-      email: "nandakishorpg98@gmail.com", // Stylized placeholder
-      resume: "/Nanda_Kishor_Resume.pdf"
+      email: "nandakishorpg@gmail.com", // Stylized placeholder
+      resume: "/Nandakishor P G - React js Developer.pdf"
     }
   },
   stats: [
@@ -86,69 +86,118 @@ export const portfolioData: PortfolioData = {
   ],
   experience: [
     {
-      company: "ABC Company",
-      role: "Frontend Developer",
-      duration: "3 Years 2 Months",
+      company: "ENFONO Technologies",
+      role: "React JS Developer",
+      duration: "Nov 2025 – Present",
       responsibilities: [
-        "Built reusable React components that reduced development cycle times across teams.",
-        "Developed scalable frontend modules for enterprise workflows and business solutions.",
-        "Worked extensively with TypeScript to secure type safety and reduce production failures.",
-        "Integrated complex REST APIs securely and handled client-side caching mechanisms.",
-        "Collaborated closely with backend developers to align data schemas and endpoint design.",
-        "Identified, debugged, and fixed critical production bugs under tight project timelines.",
-        "Improved UI performance and reduced bundle sizes by implementing code-splitting.",
-        "Implemented pixel-perfect responsive layouts catering to diverse screen dimensions.",
-        "Participated in active code reviews to maintain code quality standards and conventions.",
-        "Worked in Agile development sprints, ensuring timely deliverable completions."
+        "Developed a high-performance ERP system managing maritime shipments, including job creation, vessel assignment, Bill of Lading, and financial auditing.",
+        "Built a scalable micro-frontend (MFE) architecture using Vite Module Federation within a PNPM monorepo.",
+        "Implemented responsive UI using React 18, TypeScript, and Material UI with a custom design system.",
+        "Integrated React Hook Form with Zod for robust form handling and schema-based validation.",
+        "Designed advanced validation logic using Zod for cross-field dependencies and complex business rules.",
+        "Leveraged AI-assisted development tools (Cursor, Antigravity) to accelerate feature implementation, debugging, and code quality."
       ]
+    },
+    {
+      company: "TRANETECH Software Solutions",
+      role: "React JS Developer",
+      duration: "Jan 2025 – June 2025",
+      responsibilities: [
+        "Contributed to the implementation of EQUAL ERP Software Solutions in the UAE, a cloud-based property management system.",
+        "Centralized property monitoring for commercial and residential buildings and automated tasks like rent collection, lease tracking, and maintenance.",
+        "Supported system scalability for small businesses up to large enterprises.",
+        "Integrated advanced technology to streamline operations and reduce manual workloads."
+      ]
+    },
+    {
+      company: "CHAAVIE Solutions",
+      role: "MERN Stack Developer",
+      duration: "Feb 2023 – Jan 2025",
+      responsibilities: [
+        "Developed Happy ERP system encompassing modules for customers, staffs, suppliers, and administration.",
+        "Optimized product creation, purchase orders, goods receipts, quote generation, and sales analysis.",
+        "Implemented state management using Redux Toolkit, Context API, and Tanstack Query for caching.",
+        "Ensured secure server data transmission with JWT for user authentication.",
+        "Built server-side functionality and database logic using Node.js, Express, and MongoDB."
+      ]
+    },
+    {
+      company: "MAITEXA Info Solutions",
+      role: "MERN Stack Developer (Internship)",
+      duration: "Feb 2022 – Dec 2022",
+      responsibilities: [
+        "Completed internship on full-stack web development (MERN) building real-world style apps.",
+        "Gained proficiency in creating responsive and dynamic web applications using HTML5, CSS3, and React.js.",
+        "Implemented server-side logic and RESTful API endpoints with Node.js and Express.",
+        "Designed full-stack database integrations using MongoDB."
+      ]
+    }
+  ],
+  education: [
+    {
+      degree: "Bachelor Of Computer Applications",
+      duration: "July 2015 – May 2018",
+      institution: "SN College Vadakara Kerala – University Of Calicut"
     }
   ],
   projects: [
     {
-      title: "Enterprise ERP System",
-      description: "Large enterprise web application focused on reusable components, business workflows, API integration, performance optimization, and responsive interfaces.",
-      techStack: ["React", "TypeScript", "Material UI", "React Query", "REST API"],
+      title: "Prompt ERP",
+      badge: "ENFONO Technologies",
+      description: "High-performance shipping & logistics ERP system designed to manage vessel lifecycles, job creation, vessel assignment, Bill of Lading, and financial auditing.",
+      techStack: ["React", "TypeScript", "Vite", "Module Federation", "PNPM", "Material UI", "React Hook Form", "Zod"],
       features: [
-        "Designed a library of 30+ reusable core dashboard controls.",
-        "Integrated query caching with React Query, decreasing API load times by 40%.",
-        "Optimized heavy tables and dynamic lists with windowing elements.",
-        "Developed real-time status monitors for business workflow states."
+        "Architected micro-frontend (MFE) architecture using Vite Module Federation within a PNPM monorepo to optimize code-sharing and build times.",
+        "Designed schema validation layers using Zod for complex multi-field business rules and dynamic form dependencies.",
+        "Built a modular UI component library wrapper over Material UI, enforcing consistent styling and layout workflows."
       ],
       category: "react",
-      githubUrl: "https://https://github.com/nandakishor-Dev/enterprise-erp-system",
-      liveUrl: "https://erp-system-demo.example.com",
-      imagePlaceholder: "ERP"
+      imagePlaceholder: "ERP",
+      isPrivate: true
     },
     {
-      title: "Field Work Management System",
-      badge: "Personal / Client Project",
-      description: "Cross-platform mobile application for field employees with an administrative dashboard, authentication, offline-friendly workflows, and real-time synchronization.",
-      techStack: ["React Native", "Expo", "Supabase", "TypeScript", "PostgreSQL"],
+      title: "Equal ERP",
+      badge: "TRANETECH Software Solutions",
+      description: "Cloud-based property management system automating rent collection, lease tracking, maintenance management, and reporting for real estate firms in the UAE.",
+      techStack: ["React.js", "Ant Design (antd)", "Zustand", "Laravel"],
       features: [
-        "Built offline-first local storage cache to store work orders without signal.",
-        "Configured Supabase Realtime databases for active dispatcher updates.",
-        "Implemented Expo Push Notification pipelines for immediate task alerts.",
-        "Created an web administrative panel for dispatch managers."
+        "Developed centralized dashboards for property managers, landlords, and agents, simplifying complex leasing operations.",
+        "Automated workflows for rent invoicing, lease tracking, and maintenance logs, reducing manual administrative times.",
+        "Integrated client-side state management using Zustand to maintain high rendering speeds and UI responsiveness."
+      ],
+      category: "react",
+      liveUrl: "https://equal.ae/products/equal-property-management-system",
+      imagePlaceholder: "EQUAL",
+      imageUrl: "/assets/images/logo.svg",
+      isPrivate: true
+    },
+    {
+      title: "Happy ERP",
+      badge: "CHAAVIE Solutions",
+      description: "Comprehensive business operations ERP automating customer, staff, supplier databases, purchase orders, goods receipts, sales quotes, and analytics.",
+      techStack: ["React.js", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Redux Toolkit", "Tanstack Query"],
+      features: [
+        "Optimized processing pipelines for purchase order execution, sales quote generation, and product catalog searches.",
+        "Leveraged Redux Toolkit for local UI state and TanStack Query caching to reduce server-side API query overhead.",
+        "Implemented secure JWT (JSON Web Tokens) access flow and robust schema validation using React Hook Form."
+      ],
+      category: "react",
+      imagePlaceholder: "ERP",
+      isPrivate: true
+    },
+    {
+      title: "COCO Field Work Management System",
+      badge: "Freelance",
+      description: "Real-time field employee tracking mobile app and admin dashboard for logging work entries, tracking expenses, and collecting payments.",
+      techStack: ["React Native", "Expo", "React", "TypeScript", "Supabase"],
+      features: [
+        "Developed a cross-platform React Native mobile client using Expo, optimized with local caching for offline work logging.",
+        "Configured Supabase database schema with Row Level Security (RLS) policies to secure confidential user logs.",
+        "Engineered Cloudflare Worker proxy pipelines to ensure high-availability network routing for backend services."
       ],
       category: "mobile",
-      githubUrl: "https://https://github.com/nandakishor-Dev/field-work-management",
-      liveUrl: "https://fieldwork-app-demo.example.com",
-      imagePlaceholder: "FMS"
-    },
-    {
-      title: "Personal Portfolio Website",
-      description: "Premium, production-ready, and highly responsive personal portfolio website showcasing frontend architecture, custom hooks, and modern micro-animations.",
-      techStack: ["React", "TypeScript", "Tailwind CSS v4", "Framer Motion", "React Hook Form", "Zod"],
-      features: [
-        "Engineered v4 Tailwind compiler pipeline with ultra-fast cold builds.",
-        "Crafted premium glassmorphism designs with fully customizable Dark/Light settings.",
-        "Form validation built via React Hook Form and Zod schemas.",
-        "Optimized with clean animations, lazy loading, and semantic HTML tags for SEO."
-      ],
-      category: "react",
-      githubUrl: "https://https://github.com/nandakishor-Dev/nanda-kishor-portfolio",
-      liveUrl: "https://nandakishor-portfolio.example.com",
-      imagePlaceholder: "PORTFOLIO"
+      imagePlaceholder: "FMS",
+      isPrivate: true
     }
   ],
   hireMeReasons: [

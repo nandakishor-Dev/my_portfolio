@@ -45,10 +45,12 @@ export interface ProjectItem {
   techStack: string[];
   features: string[];
   category: 'react' | 'typescript' | 'mobile' | 'all';
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   imagePlaceholder: string;
   badge?: string;
+  imageUrl?: string;
+  isPrivate?: boolean;
 }
 
 export interface HireMeReason {
@@ -57,11 +59,18 @@ export interface HireMeReason {
   iconName: string;
 }
 
+export interface EducationItem {
+  degree: string;
+  duration: string;
+  institution: string;
+}
+
 export interface PortfolioData {
   profile: DeveloperProfile;
   stats: StatItem[];
   skills: SkillCategory[];
   experience: ExperienceItem[];
+  education: EducationItem[];
   projects: ProjectItem[];
   hireMeReasons: HireMeReason[];
 }

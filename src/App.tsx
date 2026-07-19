@@ -34,9 +34,20 @@ function App() {
 
   const navigateToHome = () => {
     if (typeof window !== 'undefined') {
-      window.history.pushState({}, '', '/');
-      setPath('/');
+      const base = import.meta.env.BASE_URL;
+      window.history.pushState({}, '', base);
+      setPath(base);
     }
+  };
+
+  const isHomePath = (currentPath: string) => {
+    const base = import.meta.env.BASE_URL;
+    const normPath = currentPath.replace(/\/+$/, '') || '/';
+    const normBase = base.replace(/\/+$/, '') || '/';
+    return (
+      normPath === normBase || 
+      normPath === `${normBase}/index.html`.replace(/\/+/g, '/')
+    );
   };
 
   return (
@@ -84,7 +95,7 @@ function App() {
                 transition={{ duration: 0.5 }}
                 className="min-h-screen"
               >
-                {path === '/' || path === '' || path === '/index.html' ? (
+                {isHomePath(path) ? (
                   <Home />
                 ) : (
                   <NotFound onGoHome={navigateToHome} />

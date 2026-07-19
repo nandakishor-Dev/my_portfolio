@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaSearch, FaListUl, FaReact, FaMobileAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaSearch, FaListUl, FaReact, FaMobileAlt, FaLock } from 'react-icons/fa';
 import { SiVite } from 'react-icons/si';
 import { portfolioData } from '../data/portfolioData';
 import { Card } from '../components/ui/Card';
@@ -14,12 +14,14 @@ const CATEGORY_LABELS: Record<CategoryFilter, string> = {
 };
 
 const PROJECT_ICONS: Record<string, React.ReactNode> = {
+  EQUAL: <FaReact className="w-10 h-10 text-blue-400" />,
   ERP: <FaReact className="w-10 h-10 text-sky-400" />,
   FMS: <FaMobileAlt className="w-10 h-10 text-emerald-400" />,
   PORTFOLIO: <SiVite className="w-10 h-10 text-purple-400" />,
 };
 
 const GRADIENTS: Record<string, string> = {
+  EQUAL: 'from-blue-500/25 to-sky-600/25 text-blue-500',
   ERP: 'from-sky-500/20 to-blue-600/20 text-sky-500',
   FMS: 'from-emerald-500/20 to-teal-600/20 text-emerald-500',
   PORTFOLIO: 'from-purple-500/20 to-indigo-600/20 text-purple-500',
@@ -131,9 +133,17 @@ export const Projects: React.FC = () => {
                   {/* Project Graphic Symbol */}
                   <motion.div
                     whileHover={{ scale: 1.08 }}
-                    className="p-5 rounded-2xl bg-bg-primary/90 dark:bg-bg-secondary/90 shadow-xl border border-border-primary/50 z-10 flex items-center justify-center cursor-default"
+                    className="p-5 rounded-2xl bg-bg-primary/90 dark:bg-bg-secondary/90 shadow-xl border border-border-primary/50 z-10 flex items-center justify-center cursor-default max-w-[80%] max-h-[75%]"
                   >
-                    {PROJECT_ICONS[project.imagePlaceholder] || <FaReact className="w-10 h-10 text-accent" />}
+                    {project.imageUrl ? (
+                      <img 
+                        src={project.imageUrl} 
+                        alt={`${project.title} logo`} 
+                        className="h-10 w-auto object-contain select-none pointer-events-none" 
+                      />
+                    ) : (
+                      PROJECT_ICONS[project.imagePlaceholder] || <FaReact className="w-10 h-10 text-accent" />
+                    )}
                   </motion.div>
                   
                   {/* Category Badge label */}
@@ -194,27 +204,53 @@ export const Projects: React.FC = () => {
 
                     {/* Links */}
                     <div className="flex items-center gap-3 w-full border-t border-border-primary/50 pt-4">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary hover:bg-bg-tertiary text-text-secondary hover:text-text-primary rounded-xl font-semibold text-xs transition-all w-1/2 cursor-pointer"
-                      >
-                        <FaGithub className="w-3.5 h-3.5" />
-                        Source Code
-                      </a>
-                      
-                      {project.liveUrl && (
+                      {project.githubUrl ? (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary hover:bg-bg-tertiary text-text-secondary hover:text-text-primary rounded-xl font-semibold text-xs transition-all ${
+                            project.liveUrl ? 'w-1/2' : 'w-full'
+                          } cursor-pointer`}
+                        >
+                          <FaGithub className="w-3.5 h-3.5" />
+                          Source Code
+                        </a>
+                      ) : project.isPrivate ? (
+                        <div
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none ${
+                            project.liveUrl ? 'w-1/2' : 'w-full'
+                          }`}
+                          title="Proprietary client codebase. Source code is confidential."
+                        >
+                          <FaLock className="w-3 h-3 text-amber-500/60" />
+                          Private Source
+                        </div>
+                      ) : null}
+
+                      {project.liveUrl ? (
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent hover:opacity-95 text-white rounded-xl font-semibold text-xs transition-all w-1/2 cursor-pointer shadow-sm shadow-accent/15"
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 bg-accent hover:opacity-95 text-white rounded-xl font-semibold text-xs transition-all ${
+                            (project.githubUrl || project.isPrivate) ? 'w-1/2' : 'w-full'
+                          } cursor-pointer shadow-sm shadow-accent/15`}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
                           Live Demo
                         </a>
-                      )}
+                      ) : project.isPrivate ? (
+                        <div
+                          className={`inline-flex items-center justify-center gap-2 px-4 py-2 border border-border-primary/20 bg-bg-tertiary/40 text-text-secondary/50 rounded-xl font-semibold text-[11px] font-sans transition-all cursor-not-allowed select-none ${
+                            (project.githubUrl || project.isPrivate) ? 'w-1/2' : 'w-full'
+                          }`}
+                          title="Internal business application. No public demo available."
+                        >
+                          <FaLock className="w-3 h-3 text-amber-500/60" />
+                          Private Demo
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>

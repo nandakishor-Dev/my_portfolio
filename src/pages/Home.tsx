@@ -6,6 +6,7 @@ import { Hero } from '../sections/Hero';
 import { About } from '../sections/About';
 import { Skills } from '../sections/Skills';
 import { Experience } from '../sections/Experience';
+import { Education } from '../sections/Education';
 import { Projects } from '../sections/Projects';
 import { WhyHireMe } from '../sections/WhyHireMe';
 import { Contact } from '../sections/Contact';
@@ -39,7 +40,7 @@ export const Home: React.FC = () => {
     ],
     "worksFor": {
       "@type": "Organization",
-      "name": "ABC Company"
+      "name": "ENFONO Technologies"
     }
   };
 
@@ -91,6 +92,10 @@ export const Home: React.FC = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
           
           <Experience />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
+          
+          <Education />
           
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
           
