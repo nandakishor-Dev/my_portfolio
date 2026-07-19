@@ -8,11 +8,9 @@ import { Skills } from '../sections/Skills';
 import { Experience } from '../sections/Experience';
 import { Education } from '../sections/Education';
 import { Projects } from '../sections/Projects';
-import { Playground } from '../sections/Playground';
 import { WhyHireMe } from '../sections/WhyHireMe';
 import { Contact } from '../sections/Contact';
 import { Footer } from '../sections/Footer';
-import { TerminalWidget } from '../components/ui/TerminalWidget';
 
 export const Home: React.FC = () => {
   const { profile } = portfolioData;
@@ -105,10 +103,6 @@ export const Home: React.FC = () => {
           
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
           
-          <Playground />
-          
-          <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
-          
           <WhyHireMe />
           
           <div className="h-px bg-gradient-to-r from-transparent via-border-primary/60 to-transparent max-w-7xl mx-auto" />
@@ -118,9 +112,6 @@ export const Home: React.FC = () => {
 
         {/* Footer */}
         <Footer />
-
-        {/* Floating Developer Terminal Widget */}
-        <TerminalWidget />
       </div>
     </>
   );
