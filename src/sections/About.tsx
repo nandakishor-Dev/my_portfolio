@@ -53,7 +53,7 @@ export const About: React.FC = () => {
   const { profile, stats } = portfolioData;
 
   const bulletPoints = [
-    "3 years 2 months professional experience",
+    "3 years 4 months professional experience",
     "Enterprise frontend web development",
     "React.js Core Expertise",
     "TypeScript & Typings Architecture",

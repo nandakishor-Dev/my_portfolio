@@ -14,7 +14,7 @@ export const portfolioData: PortfolioData = {
       ]
     },
     shortDescription: "Building scalable, responsive, and high-performance web applications with React.js, TypeScript, and modern frontend technologies. I also have hands-on experience developing cross-platform mobile applications using React Native through personal and client projects.",
-    aboutSummary: "I am a Frontend Developer with 3 years and 2 months of professional experience specializing in building modern, scalable, responsive web applications using React.js and TypeScript. I have worked on enterprise-level frontend applications, reusable component architecture, API integration, performance optimization, bug fixing, and modern UI development.",
+    aboutSummary: "I am a Frontend Developer with 3 years and 4 months of professional experience specializing in building modern, scalable, responsive web applications using React.js and TypeScript. I have worked on enterprise-level frontend applications, reusable component architecture, API integration, performance optimization, bug fixing, and modern UI development.",
     aboutHonestMobile: "I also have practical React Native experience through personal projects and one client project, and I continue expanding my mobile development skills.",
     profileImagePlaceholderText: "NK",
     socials: {
