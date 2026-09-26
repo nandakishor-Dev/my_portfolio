@@ -92,7 +92,7 @@ export const portfolioData: PortfolioData = {
       role: "React JS Developer",
       duration: "Nov 2025 – Present",
       responsibilities: [
-        "Developed a high-performance ERP system managing maritime shipments, including job creation, vessel assignment, Bill of Lading, and financial auditing.",
+        "Contributing to the development of a large-scale enterprise ERP platform covering multiple business areas, including Shipping, Accounts, and other core business operations",
         "Built a scalable micro-frontend (MFE) architecture using Vite Module Federation within a PNPM monorepo.",
         "Implemented responsive UI using React 18, TypeScript, and Material UI with a custom design system.",
         "Integrated React Hook Form with Zod for robust form handling and schema-based validation.",
