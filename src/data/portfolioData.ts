@@ -144,9 +144,9 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      title: "Prompt ERP",
+      title: "Enterprise ERP Platform",
       badge: "ENFONO Technologies",
-      description: "High-performance shipping & logistics ERP system designed to manage vessel lifecycles, job creation, vessel assignment, Bill of Lading, and financial auditing.",
+      description: "High-performance shipping & Accounts ERP system designed to manage vessel lifecycles, job creation, vessel assignment, Bill of Lading, and financial auditing.",
       techStack: ["React", "TypeScript", "Vite", "Module Federation", "PNPM", "Material UI", "React Hook Form", "Zod"],
       features: [
         "Architected micro-frontend (MFE) architecture using Vite Module Federation within a PNPM monorepo to optimize code-sharing and build times.",
